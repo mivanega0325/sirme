@@ -1,6 +1,6 @@
 //CRUD EMPLEADOS SIRME
 
-const { act } = require("react");
+// const { act } = require("react");
 
 // BASE DE DATOS EMPLEADOS
 
@@ -18,7 +18,7 @@ const listarEmpleados = () => {
     console.log("Total de empleados:", empleados.length);
 };
 
-//listarEmpleados(empleados);
+// listarEmpleados(empleados);
 
 // CREATE - Agregar empleados
 
@@ -36,6 +36,7 @@ const agregarEmpleados = (nombre, cargo, turno, correo) => {
 
 //agregarEmpleados("Yolanda Londoño", "Matrona", "Diurno", "yolyferry@gmail.com");
 
+
 // UPDATE - Actualizar o modificar empleados
 
 //nuevoDato
@@ -50,5 +51,7 @@ const actualizarEmpleado = (id, nuevoNombre) => {
     }
     console.log(`❌ No se encontró a Empleado con ID: ${id}`);
 };
-//actualizarEmpleado(3, "Luz Elena");
+actualizarEmpleado(3, "Luz Elena Medina");
+listarEmpleados(empleados);
+
 
