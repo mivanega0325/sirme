@@ -1,8 +1,9 @@
-//CRUD EMPLEADOS SIRME
 
-// const { act } = require("react");
+// ======================================================
+//         C R U D  EMPLEADOS SIRME
+// ======================================================
 
-// BASE DE DATOS EMPLEADOS
+// ============  BASE DE DATOS INICIAL DE EMPLEADOS =============
 
 let empleados = [
     { id: 1, nombre: "Apolo Vanegas", cargo: "Mascota", turno: "Diurno", correo: "apolo@gmail.com"},
@@ -10,7 +11,9 @@ let empleados = [
     { id: 3, nombre: "Elena Medina", cargo: "Matrona", turno: "Diurno", correo: "elenamedina@gmail.com"},
 ];
 
-//READ - Mostrar empleados
+// ===========================================
+//   READ - Listar o Mostrar los Empleados
+// ===========================================
 
 const listarEmpleados = () => {
     console.log("     === EMPLEADOS ACTUALES ===");
@@ -18,13 +21,13 @@ const listarEmpleados = () => {
     console.log("Total de empleados:", empleados.length);
 };
 
-// listarEmpleados(empleados);
-
-// CREATE - Agregar empleados
+// ===========================================
+//      CREATE - Agregar empleados
+// ===========================================
 
 const agregarEmpleados = (nombre, cargo, turno, correo) => {
     const nuevoEmpleado = {
-        id: Date.now(),
+        id: Math.floor(),
         nombre: nombre,
         cargo: cargo,
         turno: turno,
@@ -34,24 +37,55 @@ const agregarEmpleados = (nombre, cargo, turno, correo) => {
     console.log(`✅ Empleado '${nombre}' agregado con éxito`);
 };
 
-//agregarEmpleados("Yolanda Londoño", "Matrona", "Diurno", "yolyferry@gmail.com");
 
+// ===============================================
+//   UPDATE - Actualizar o modificar empleados
+// ===============================================
 
-// UPDATE - Actualizar o modificar empleados
-
-//nuevoDato
-
-const actualizarEmpleado = (id, nuevoNombre) => {
+const actualizarEmpleado = (id, nuevoNombre, nuevoCargo, nuevoTurno, nuevoCorreo) => {
     for (let i = 0; i < empleados.length; i++) {
         if (empleados[i].id === id) {      
             empleados[i].nombre = nuevoNombre;
-            console.log(`🔄 Nombre del ID ${id} actualizado a: ${nuevoNombre}`);
+             empleados[i].cargo = nuevoCargo;
+            empleados[i].turno = nuevoTurno;
+            empleados[i].correo = nuevoCorreo;
+            console.log(`🔄 Nombre del ID ${id} actualizado a: ${nuevoNombre} , ${nuevoCargo} , ${nuevoTurno} , ${nuevoCorreo}`);
             return;
         }
     }
-    console.log(`❌ No se encontró a Empleado con ID: ${id}`);
+    console.log(`❌ No se encontró el Empleado con ID: ${id}`);
 };
-actualizarEmpleado(3, "Luz Elena Medina");
+
+
+// ===========================================
+//     DELETE - Eliminar un empleado
+// ===========================================
+
+const eliminarEmpleado = (id) => {
+    for (let i = 0; i < empleados.length; i++) {
+        if (empleados[i].id === id) {
+            const nombre = empleados[i].nombre;
+            empleados.splice(i, 1);
+            console.log(`🗑️  Empleado '${nombre}' Eliminado exitosamente`);
+            return;
+        }
+    }
+    console.log(`❌ No se encontró el Empleado con ID: ${id}`);
+};
+
+// READ: ver el estado inicial
 listarEmpleados(empleados);
 
+// CREATE: agregar un nuevo producto
+agregarEmpleados("Yolanda Londoño", "Matrona", "Diurno", "yolyferry@gmail.com");
+listarEmpleados(empleados);
 
+// UPDATE: cambiar el precio del ID 1
+actualizarEmpleado(2, "Isabella Lopez", "Nietecita", "Diurno", "isabella@gmail.com");
+listarEmpleados(empleados);
+
+// DELETE: eliminar el ID 2
+eliminarEmpleado(3);
+
+// READ final: ver el inventario sin el producto eliminado
+listarEmpleados(empleados);
