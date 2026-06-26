@@ -1,0 +1,160 @@
+html{
+    height: 100%;  
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+    display: grid;
+    min-height: 80vh;
+    align-content: center;
+    justify-content:space-evenly;
+    align-items:center;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+}
+.menu a{
+    text-decoration: none;
+    color: #333;
+    padding: 0 0.5em;
+}
+.contenedorcuenta{
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+.conectado{
+    justify-items:flex-end;
+}
+.conectado h1{
+    border-radius: 100%;
+    background-color:rgb(238, 180, 243);
+    padding: 15%;
+    width:min-content;
+    color: #333;
+    font-weight: 600;
+    font-size: 25px;
+}
+.conectado h4{
+    color: #333;
+    font-weight: 600;
+    padding-bottom: 20px;
+    font-size: 11px;
+}
+.contenedorcuenta h1{
+    padding-top: 1%;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    padding-bottom: 40px;
+    font-size: 30px;
+}
+.nombrecompleto label{
+    margin-bottom: 1px;
+    font-weight: 500;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+.cargo label{
+    margin-bottom: 1px;
+    font-weight: 500;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+.proyecto label{
+    margin-bottom: 1px;
+    font-weight: 500;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+.horario label{
+    margin-bottom: 1px;
+    font-weight: 500;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+.correo label{
+    margin-bottom: 1px;
+    font-weight: 500;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+.clave label{
+    margin-bottom: 1px;
+    font-weight: 500;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+input{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+.botoncrear{
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+button{
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 4% 10%;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: #3a7bc8;
+}
+@media (max-width: 768px){
+    .contenedorcuenta{
+        padding: 20px;
+    }
+}
+h1{
+    font-size: 24px;
+}
+input{
+    padding: 10px 12px;
+}
+@media (max-width: 480px){
+    body {
+        padding: 10px;
+    }
+    .contenedorcuenta{
+        padding: 15px;
+    }
+    h1{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
