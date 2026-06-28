@@ -20,8 +20,8 @@ funcional.
 
 Actores Involucrados 
 
-Usuarios: Empleados, Gerentes, Administradores. 
-Stakeholders: Clientes, proveedores de software. 
+- Usuarios: Empleados, Gerentes, Administradores. <br>
+- Stakeholders: Clientes, proveedores de software. 
 
 
 ## Características
@@ -85,5 +85,5 @@ SIRME/
 
 ## Autores
 
-Maria Isabel Vanegas Londoño
+Maria Isabel Vanegas Londoño <br>
 Gustavo Carvajal Medina
